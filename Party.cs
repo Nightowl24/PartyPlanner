@@ -42,7 +42,7 @@ namespace PartyPlanner
         // Add Properties here:
         public string Name { get; set; }
         public string Location { get; set; }
-        public string Size { get; set; }
+        public int Attendees { get; set; }
         public string Time { get; set; }
         public bool Attend { get; set; }
 
@@ -54,6 +54,15 @@ namespace PartyPlanner
         // Show number attending, etc.
         // Add Methods here:
 
-        
+        public void AddAttendees()
+        {
+            Attendees++;
+
+        }
+        public void AddAttendees(int numbertoadd)
+        {
+            Attendees += numbertoadd;
+
+        }
     }
 }
