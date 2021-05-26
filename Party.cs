@@ -6,6 +6,8 @@ namespace PartyPlanner
 {
     public class Party
     {
+          
+
         // The Party class will manage all Properties ("states") and Methods ("behaviors")
         // related to a party. 
         // Let's practice adding Constructors, Properties, and Methods into our Party class.
@@ -14,18 +16,35 @@ namespace PartyPlanner
         // CONSTRUCTORS
         // Even though the default constructor exists behind the scenes for a class,
         // practice adding a default Party() constructor here:
+        
+        public Party()
+        {
 
+        }
 
         // Add a second constructor of your choosing.  Make it different than the default 
         // constructor.  
         // Add it here:
+        public Party(string name, string location, string size, string time, bool attend)
+        {
+            Name = name;
+            Location = location;
+            Size = size;
+            Time = time;
+            Attend = attend;
 
+        }
 
         // PROPERTIES
         // Use getters and setters to define some Properties.  Have fun with it.
         // What Party "states" would you like to manage?
         // Be creative, but here are some ideas: Name, Date, Number of Attendees, Budget, etc.
         // Add Properties here:
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public string Size { get; set; }
+        public string Time { get; set; }
+        public bool Attend { get; set; }
 
 
         // METHODS
@@ -34,5 +53,7 @@ namespace PartyPlanner
         // Have fun with it.  Here are some ideas: Print invite, Change budget, Add an attendee,
         // Show number attending, etc.
         // Add Methods here:
+
+        
     }
 }
