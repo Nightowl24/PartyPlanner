@@ -25,11 +25,11 @@ namespace PartyPlanner
         // Add a second constructor of your choosing.  Make it different than the default 
         // constructor.  
         // Add it here:
-        public Party(string name, string location, string size, string time, bool attend)
+        public Party(string name, string location, int attendees, string time, bool attend)
         {
             Name = name;
             Location = location;
-            Size = size;
+            Attendees = attendees;
             Time = time;
             Attend = attend;
 
@@ -64,5 +64,6 @@ namespace PartyPlanner
             Attendees += numbertoadd;
 
         }
+
     }
 }
