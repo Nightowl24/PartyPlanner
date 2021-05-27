@@ -25,14 +25,13 @@ namespace PartyPlanner
         // Add a second constructor of your choosing.  Make it different than the default 
         // constructor.  
         // Add it here:
-        public Party(string name, string location, int attendees, string time, bool attend)
+        public Party(string name, string location, string time, int numInvite, bool theme)
         {
-            Name = name;
-            Location = location;
-            Attendees = attendees;
+            PartyType = name;
+            Address = location;            
             Time = time;
-            Attend = attend;
-
+            Attendees = numInvite;
+            Costume = theme;
         }
 
         // PROPERTIES
@@ -40,11 +39,12 @@ namespace PartyPlanner
         // What Party "states" would you like to manage?
         // Be creative, but here are some ideas: Name, Date, Number of Attendees, Budget, etc.
         // Add Properties here:
-        public string Name { get; set; }
-        public string Location { get; set; }
-        public int Attendees { get; set; }
+        public string PartyType { get; set; }
+        public string Address { get; set; }
         public string Time { get; set; }
-        public bool Attend { get; set; }
+        public int Attendees { get; set; }
+        public bool Costume { get; set; }
+      
 
 
         // METHODS
