@@ -6,14 +6,16 @@ namespace PartyPlanner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Planning a party?");
 
-            int number = 7;
             Party myParty = new Party();
+
             myParty.GetPartyType();
+            myParty.WhereParty();
+            myParty.Timeofparty();
+            myParty.Whoiscoming();
 
-
-            //myParty.PrintInfo();
+            myParty.PrintInfo();
 
         }
 

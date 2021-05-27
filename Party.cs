@@ -25,7 +25,7 @@ namespace PartyPlanner
         // Add a second constructor of your choosing.  Make it different than the default 
         // constructor.  
         // Add it here:
-        public Party(string name, string location, string time, int numInvite)
+        public Party(string name, string location, int time, int numInvite)
         {
             PartyType = name;
             Address = location;            
@@ -41,7 +41,7 @@ namespace PartyPlanner
         // Add Properties here:
         public string PartyType { get; set; }
         public string Address { get; set; }
-        public string Time { get; set; }
+        public int Time { get; set; }
         public int Attendees { get; set; }
         
       
@@ -54,46 +54,80 @@ namespace PartyPlanner
         // Show number attending, etc.
         // Add Methods here:
 
-        public void AddAttendees()
-        {
-            Attendees++;
+        //public void AddAttendees()
+        //{
+        //    Attendees++;
 
-        }
-        public void AddAttendees(int numbertoadd)
-        {
-            Attendees += numbertoadd;
+        //}
+        //public void AddAttendees(int numbertoadd)
+        //{
+        //    Attendees += numbertoadd;
 
-        }
+        //}
         public void GetPartyType()
         {
             Console.WriteLine("Tell us the type of party you want to have?");
             PartyType = Console.ReadLine();
         }
 
-
-        //public void PrintInfo()
-        //{
-        //    Console.WriteLine("The name of your party is " + PartyType);
-
-        //}
-
         public void WhereParty()
         {
-            Console.WriteLine("Where is the party location?" + Address);
+            Console.WriteLine("Where is the party location?");
             Address = Console.ReadLine();
         }
 
         public void Timeofparty()
         {
-            Console.WriteLine("What time is this party?" + Time);
-            Time = Console.ReadLine();
+            Console.WriteLine("What time is this party?");
+            Time = Convert.ToInt32(Console.ReadLine());
+            if (Time > 6)
+            {
+                Console.WriteLine("Night Party");
+            }
+            else
+            {
+                Console.WriteLine("Day Party");
+            }
+
+
+        }
+        public void Whoiscoming()
+        {
+            Console.WriteLine("How many people are coming?");
+            Attendees = Convert.ToInt32(Console.ReadLine());
+
+            if (Attendees > 500)
+            {
+                Console.WriteLine("Over Capacity!");
+            }
+            else
+            {
+                Console.WriteLine("Good");
+            }
+            
 
         }
 
-        public void Whoiscoming()
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+        public void PrintInfo()
         {
-            Console.WriteLine("How many people are coming?" + Attendees);
-            Attendees = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The name of your party is " + PartyType);
+            Console.WriteLine("The party location is " + Address);
+            Console.WriteLine("The Time of the party is " + Time);
+            Console.WriteLine("The amount of people at the party is " + Attendees);
+
         }
 
     }
