@@ -25,13 +25,13 @@ namespace PartyPlanner
         // Add a second constructor of your choosing.  Make it different than the default 
         // constructor.  
         // Add it here:
-        public Party(string name, string location, string time, int numInvite, bool theme)
+        public Party(string name, string location, string time, int numInvite)
         {
             PartyType = name;
             Address = location;            
             Time = time;
             Attendees = numInvite;
-            Costume = theme;
+            
         }
 
         // PROPERTIES
@@ -43,7 +43,7 @@ namespace PartyPlanner
         public string Address { get; set; }
         public string Time { get; set; }
         public int Attendees { get; set; }
-        public bool Costume { get; set; }
+        
       
 
 
@@ -63,6 +63,37 @@ namespace PartyPlanner
         {
             Attendees += numbertoadd;
 
+        }
+        public void GetPartyType()
+        {
+            Console.WriteLine("Tell us the type of party you want to have?");
+            PartyType = Console.ReadLine();
+        }
+
+
+        //public void PrintInfo()
+        //{
+        //    Console.WriteLine("The name of your party is " + PartyType);
+
+        //}
+
+        public void WhereParty()
+        {
+            Console.WriteLine("Where is the party location?" + Address);
+            Address = Console.ReadLine();
+        }
+
+        public void Timeofparty()
+        {
+            Console.WriteLine("What time is this party?" + Time);
+            Time = Console.ReadLine();
+
+        }
+
+        public void Whoiscoming()
+        {
+            Console.WriteLine("How many people are coming?" + Attendees);
+            Attendees = Convert.ToInt32(Console.ReadLine());
         }
 
     }
